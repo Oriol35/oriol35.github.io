@@ -1,4 +1,4 @@
-# oriol35.github.io
+# Hypermedia project. Part 1
 
  - Project analysis, User profile: create a user persona for your website
    - Project analysis, Information architecture: describe using around 200 words (minimum) how you have distributed the page's information.
