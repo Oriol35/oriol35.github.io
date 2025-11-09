@@ -54,9 +54,8 @@ The main reason the page is kept simple and direct also takes into account keepi
 
 - **Shapes**: The combination of pastel colors within round objects helps with cohesion. That's the reason why the navigation bar is rectangular and has more harsh colors (by doing that you inherently make it stand out more).  
 
-as I said before, I tend to keep things simple so they can be more effective. But that does not mean it's the best strategy. For example if you ask most people about this website most people will critizise how simple it is. And that's because I did not apply enough design notions into my design (partly because of my **skill issues**)
+As I said before, I tend to keep things simple so they can be more effective. But that does not mean it's the best strategy. For example if you ask most people about this website most people will critizise how simple it is. And that's because I did not apply enough design notions into my design (partly because of my **skill issues**). in my opinion this could've been better, but at the same time I like simple pages that don't need to put barriers on you and just inform you... it might be nostalgia, but I still have a lot to learn if I want to be at the same level of today's standards.
 
+[Link to my Figma project](https://www.figma.com/design/JXUJvgUTxrT1NQhXrxVdH4/CV-website?m=auto&t=gsnKoEnPReT9opVY-1)
 
-[Link to my Figma project](google.com)
-
-You should be able to freely watch/modify the project
+You should be able to freely watch the project! Thank you for visiting ^^
