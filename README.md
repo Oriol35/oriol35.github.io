@@ -2,7 +2,7 @@
 
 This projest's webpage is aimed to serve as a potential webpage-shaped professional curriculum vitae (CV).
 
-You can see it's contents through [this link](google.com)
+You can see it's contents through [this link](oriol35.github.io)
 
  ## Project analysis
 
