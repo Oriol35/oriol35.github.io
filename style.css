@@ -1,0 +1,188 @@
+:root{
+	--bg:rgb(219, 199, 235);
+	--headBg: rgb(69, 56, 78);/*#3b3b3b;*/
+    
+    --cardText: black;
+    --headerText: #f5ff62;
+    --cardColor: rgb(204, 182, 221);
+	--bRadius:15px;
+    --headerHeight: 50px;
+
+    
+    --borderColor: #9b9cae;
+    
+    --hoverColor: #fb4def;
+    --linkColor: #b1b1ff;
+}
+
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    display: block;
+    background-color: var(--bg);
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family: Verdana, sans-serif;
+    font-size: 3rem;
+}
+
+h2, h3, p {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+ul {
+  list-style-type: ">> ";
+}
+
+a {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: underline;
+    color: rgb(118, 6, 146);
+    background-color: var(--bg);
+}
+
+a:hover {
+    color: rgb(236, 75, 0);
+}
+
+header {
+    height: var(--headerHeight);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    color: var(--headerText);
+    background-color: var(--headBg);
+    text-align: right;
+    align-items: center;
+    vertical-align: middle;
+    padding: 10px;
+    z-index: 10; /* highest z */
+}
+
+header a {
+    background-color: transparent;
+    padding: 5px;
+    color: var(--headerText);
+    text-decoration: none;
+    display: inline-block;
+}
+
+header a::after {
+    content: "|";
+    font-size: 20px;
+    margin-left: 15px;
+    color: white;
+}
+
+header a:last-child::after {
+    content: "";
+}
+
+header a::first-letter {
+    color: var(--hoverColor);;
+}
+
+header a:hover {
+    color: var(--hoverColor);
+    font-weight: normal;
+}
+
+p b {
+    font-style: italic;
+}
+
+#contents {
+    display: flex;
+    flex-direction: column; /* Stack sections vertically */
+    justify-content: center; /* Vertically center all sections */
+    align-items: center; /* Horizontally center all sections */
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+#section0, #section1, #section2, #section3, #section4 {
+    width: 80%; /* Or set a fixed width if you want the sections smaller than the container */
+    max-width: 1000px; /* Optional: limit max width if you don't want them too wide */
+    
+    padding: calc(var(--headerHeight) + 20px) 80px 20px 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px; /* Add space between sections if needed */
+    text-align: left; /* Optional: to center the content inside each section */
+
+
+    color: var(--cardText);
+    border: 5px solid;
+    border-color: var(--borderColor);
+    border-radius: var(--bRadius);
+    background-color: var(--cardColor);
+}
+
+#selfDesc {
+    font-style: italic;
+    font-size: 18px;
+    width: 50%;
+}
+
+#pfp {
+    margin-right: 100px;
+    float: right;
+    width: auto;
+    height: 250px;
+    align-content: right;
+    border: 2px solid var(--borderColor);
+    border-radius: var(--bRadius);
+}
+
+
+
+#sections {
+    display: inline-block;
+    justify-content: right;
+}
+
+#present {
+    text-align: left;
+    padding: calc(var(--headerHeight) + 20px) 80px 20px 80px;
+    margin-top: 0;
+}
+
+#aboutMe1, #aboutMe2 {
+    width: 50%;
+    padding-right: 20px;
+}
+
+/*style="margin: auto auto 20% auto; display:block; width: 50%; height: auto; padding: 20px; object-fit: contain;"*/
+
+#computerImg {
+    margin: auto auto 20% auto;
+    display: block;
+    width: 50%;
+    height: auto;
+    padding: 20px;
+    object-fit: contain;
+}
+
+#section0, #section1, #section2, #section3, #section4 {
+    border: 2px solid var(--borderColor);
+    align-items: center;
+    display: inline-block;
+    padding: calc(var(--headerHeight) + 20px) 80px 0 80px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+}
