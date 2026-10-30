@@ -1,6 +1,6 @@
-# Oriol35.github.io
+# oriol35.github.io
 
-Personal portfolio, published at https://Oriol35.github.io with GitHub Pages.
+Personal portfolio, published at https://oriol35.github.io with GitHub Pages.
 
 It is a plain static site with no build step. Anything pushed to `main` is deployed.
 
