@@ -6,10 +6,11 @@ const arrows = [...document.querySelectorAll(".arrow")];
 const reducedMotion = matchMedia("(prefers-reduced-motion: reduce)");
 const contactSection = document.querySelector(".contact-section");
 const pulseCooldown = 3000;
+const slideDuration = 300;
 
 let current = -1;
 let moving = false;
-let movingTimer;
+let slideFrame;
 let lastPulse = -pulseCooldown;
 let pulseWatch;
 
@@ -32,12 +33,40 @@ function setCurrent(index) {
   });
 }
 
-function goTo(index, behavior = reducedMotion.matches ? "auto" : "smooth") {
-  if (index < 0 || index >= worlds.length) return;
+function stopSlide() {
+  cancelAnimationFrame(slideFrame);
+  moving = false;
+  rail.classList.remove("sliding");
+}
+
+function slideTo(left) {
+  const from = rail.scrollLeft;
+  cancelAnimationFrame(slideFrame);
+
+  if (reducedMotion.matches) {
+    stopSlide();
+    rail.scrollLeft = left;
+    return;
+  }
+
   moving = true;
-  clearTimeout(movingTimer);
-  movingTimer = setTimeout(() => { moving = false; }, 1000);
-  rail.scrollTo({ left: index * rail.clientWidth, behavior });
+  rail.classList.add("sliding");
+  let start;
+
+  function step(now) {
+    start ??= now;
+    const progress = Math.min((now - start) / slideDuration, 1);
+    rail.scrollLeft = from + (left - from) * (1 - (1 - progress) ** 3);
+    if (progress < 1) slideFrame = requestAnimationFrame(step);
+    else stopSlide();
+  }
+
+  slideFrame = requestAnimationFrame(step);
+}
+
+function goTo(index) {
+  if (index < 0 || index >= worlds.length) return;
+  slideTo(index * rail.clientWidth);
   history.replaceState(null, "", `#${worlds[index].id}`);
   setCurrent(index);
   worlds[index].focus({ preventScroll: true });
@@ -55,15 +84,20 @@ rail.addEventListener("scroll", () => {
 }, { passive: true });
 
 rail.addEventListener("scrollend", () => {
-  moving = false;
-  syncCurrent();
+  if (!moving) syncCurrent();
 });
+
+rail.addEventListener("touchstart", stopSlide, { passive: true });
 
 document.querySelectorAll(".brand, .tab").forEach((link) => {
   link.addEventListener("click", (event) => {
     event.preventDefault();
     goTo(indexOf(link.getAttribute("href")));
   });
+});
+
+document.querySelector(".brand").addEventListener("click", () => {
+  worlds[0].scrollTo({ top: 0 });
 });
 
 arrows.forEach((arrow) => {
@@ -113,6 +147,7 @@ contactSection.addEventListener("animationend", () => {
 });
 
 addEventListener("resize", () => {
+  stopSlide();
   rail.scrollTo({ left: current * rail.clientWidth, behavior: "auto" });
 });
 

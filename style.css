@@ -118,6 +118,7 @@ a {
 
 .brand {
   display: flex;
+  gap: 8px;
   align-items: center;
   padding: 0 24px;
   font-size: 15px;
@@ -228,6 +229,10 @@ kbd {
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
+}
+
+.worlds.sliding {
+  scroll-snap-type: none;
 }
 
 .worlds::-webkit-scrollbar {
