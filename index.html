@@ -1,17 +1,164 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-world="professional">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>oriol35 | Portfolio</title>
   <meta name="description" content="Portfolio of oriol35.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Serif:wght@400&family=JetBrains+Mono:wght@400;500&family=Unbounded:wght@300&display=swap">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main>
-    <h1>oriol35</h1>
-    <p>Portfolio coming soon.</p>
-    <p><a href="https://github.com/oriol35">GitHub</a></p>
+  <nav class="switcher" aria-label="Portfolio pages">
+    <a class="brand" href="#professional">oriol35</a>
+    <div class="tabs">
+      <a class="tab" href="#professional" aria-current="page" aria-keyshortcuts="1"><span class="tab-number">01</span> Professional</a>
+      <a class="tab" href="#artistic" aria-keyshortcuts="2"><span class="tab-number">02</span> Artistic</a>
+      <a class="tab" href="#technical" aria-keyshortcuts="3"><span class="tab-number">03</span> Technical</a>
+    </div>
+    <div class="arrows">
+      <button class="arrow" type="button" data-step="-1" aria-label="Previous page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </button>
+      <button class="arrow" type="button" data-step="1" aria-label="Next page">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <main class="worlds">
+    <section class="world" id="professional" data-world="professional" aria-label="Professional" tabindex="-1">
+      <div class="mobile-brand">oriol35</div>
+      <div class="column">
+        <header class="hero">
+          <div class="hero-copy">
+            <p class="label">Portfolio / Professional</p>
+            <div class="hero-name">
+              <h1>oriol35</h1>
+              <img class="hero-logo" src="assets/logo.svg" alt="" width="10" height="9">
+            </div>
+            <p class="summary">[One or two sentences on what you do and the kind of work you want next.]</p>
+            <div class="actions">
+              <a class="button primary" aria-disabled="true" data-key="d" aria-keyshortcuts="d">Download CV <kbd>D</kbd></a>
+              <a class="button secondary" href="#contact" data-key="t" aria-keyshortcuts="t">Get in touch <kbd>T</kbd></a>
+            </div>
+          </div>
+          <div class="box-art" aria-hidden="true">
+            <b class="box avatar" style="--x:116;--y:0;--w:290;--h:290"></b>
+            <b class="box" style="--x:0;--y:0;--w:116;--h:116"></b>
+            <b class="box" style="--x:44;--y:116;--w:43;--h:43"></b>
+            <b class="box" style="--x:87;--y:116;--w:29;--h:29"></b>
+            <b class="box" style="--x:87;--y:145;--w:29;--h:29"></b>
+            <b class="box" style="--x:314;--y:290;--w:29;--h:29"></b>
+            <b class="box" style="--x:343;--y:290;--w:63;--h:66"></b>
+            <i class="across" style="--x:0;--y:0;--l:406;--a:56;--b:56"></i>
+            <i class="across" style="--x:0;--y:116;--l:116;--a:56"></i>
+            <i class="across" style="--x:87;--y:145;--l:29"></i>
+            <i class="across" style="--x:44;--y:159;--l:43;--a:32"></i>
+            <i class="across" style="--x:87;--y:174;--l:29;--a:32"></i>
+            <i class="across" style="--x:116;--y:290;--l:290;--a:56;--b:56"></i>
+            <i class="across" style="--x:314;--y:319;--l:29;--a:32"></i>
+            <i class="across" style="--x:343;--y:356;--l:63;--b:56"></i>
+            <i class="down" style="--x:0;--y:0;--l:116;--a:56;--b:56"></i>
+            <i class="down" style="--x:44;--y:116;--l:43;--b:32"></i>
+            <i class="down" style="--x:87;--y:116;--l:58;--b:32"></i>
+            <i class="down" style="--x:116;--y:0;--l:290;--a:56"></i>
+            <i class="down" style="--x:406;--y:0;--l:356;--a:56;--b:56"></i>
+            <i class="down" style="--x:314;--y:290;--l:29;--b:32"></i>
+            <i class="down" style="--x:343;--y:290;--l:66;--b:32"></i>
+          </div>
+        </header>
+
+        <h2 class="section-title"><span>01</span> Experience</h2>
+        <ol class="experience">
+          <li>
+            <p class="meta">Summer 2026 – now</p>
+            <div>
+              <h3>Software Team, <a href="https://iquarobotics.com/" target="_blank" rel="noopener noreferrer">IQUA Robotics</a></h3>
+              <p>[What you owned, what you built, and how it turned out.]</p>
+            </div>
+            <p class="meta place"><a href="https://www.google.com/maps/search/?api=1&amp;query=IQUA%20Robotics%2C%20Carrer%20Pic%20de%20Peguera%2011%2C%2017003%20Girona" target="_blank" rel="noopener noreferrer">Girona</a></p>
+          </li>
+          <li>
+            <p class="meta">2025</p>
+            <div>
+              <h3>Software Engineer, <a href="https://www.aetech.biz/en/" target="_blank" rel="noopener noreferrer">AETech</a></h3>
+              <p>[Internal tools: what you owned, what you built, and how it turned out.]</p>
+            </div>
+            <p class="meta place"><a href="https://www.google.com/maps/search/?api=1&amp;query=AETECH%2C%20Carrer%20d%27Amnistia%20Internacional%2022%2C%2017190%20Salt%2C%20Girona" target="_blank" rel="noopener noreferrer">Salt, Girona</a></p>
+          </li>
+        </ol>
+
+        <div class="education-skills">
+          <section class="education" aria-labelledby="education-title">
+            <h2 class="section-title" id="education-title"><span>02</span> Education</h2>
+            <ol>
+              <li>
+                <h3>Computer Science, University of Girona</h3>
+                <p class="meta">2023 – now / Software specialization / Year 4 of 4</p>
+              </li>
+              <li>
+                <h3>Technological Baccalaureate, Maristes Girona</h3>
+                <p class="meta">2021 – 2023</p>
+              </li>
+            </ol>
+          </section>
+          <section class="skills" aria-labelledby="skills-title">
+            <div class="skills-panel">
+              <h2 class="section-title" id="skills-title"><span>03</span> Skills</h2>
+              <dl class="skills-list" tabindex="0" aria-labelledby="skills-title">
+                <div><dt>[Area]</dt><dd>[Skill, skill, skill]</dd></div>
+                <div><dt>[Area]</dt><dd>[Skill, skill, skill]</dd></div>
+                <div><dt>[Languages]</dt><dd>[Language, language]</dd></div>
+                <div><dt>[Tools]</dt><dd>[Skill, skill, skill]</dd></div>
+                <div><dt>[Methods]</dt><dd>[Skill, skill, skill]</dd></div>
+                <div><dt>[Other]</dt><dd>[Skill, skill, skill]</dd></div>
+              </dl>
+            </div>
+          </section>
+        </div>
+
+        <div class="contact-section">
+        <h2 class="section-title" id="contact"><span>04</span> Contact</h2>
+        <footer class="contact">
+          <div>
+            <p class="contact-headline">Let's talk.</p>
+            <a class="contact-link" href="mailto:oriolbermejocuadros@proton.me" target="_blank" rel="noopener noreferrer" data-key="e" aria-keyshortcuts="e">oriolbermejocuadros@proton.me<kbd>E</kbd></a>
+          </div>
+          <div class="contact-links">
+            <a class="contact-link" href="https://github.com/Oriol35" target="_blank" rel="noopener noreferrer" data-key="g" aria-keyshortcuts="g">github.com/Oriol35<kbd>G</kbd></a>
+            <p class="contact-link">[no LinkedIn]</p>
+          </div>
+        </footer>
+        </div>
+      </div>
+    </section>
+
+    <section class="world draft" id="artistic" data-world="artistic" aria-label="Artistic" tabindex="-1">
+      <div class="mobile-brand">oriol35</div>
+      <div class="draft-hero">
+        <p class="label">02 / Artistic</p>
+        <h1>oriol35</h1>
+        <p class="summary">[One sentence about what you make and why it matters to you.]</p>
+      </div>
+    </section>
+
+    <section class="world draft" id="technical" data-world="technical" aria-label="Technical" tabindex="-1">
+      <div class="mobile-brand">oriol35</div>
+      <div class="draft-hero">
+        <p class="label">03 / Technical</p>
+        <h1>oriol35</h1>
+        <p class="summary">[One or two lines on what you build and the kind of problems you like.]</p>
+        <div class="actions">
+          <a class="button secondary" href="https://github.com/Oriol35" target="_blank" rel="noopener noreferrer" data-key="g" aria-keyshortcuts="g">github.com/Oriol35 <kbd>G</kbd></a>
+        </div>
+      </div>
+    </section>
   </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
